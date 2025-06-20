@@ -1,4 +1,5 @@
-1)Write a C program to create a new text file and write "Hello, World!" to it
+```
+//1)Write a C program to create a new text file and write "Hello, World!" to it
 #include<stdio.h>
 #include<unistd.h>
 #include<fcntl.h>
@@ -11,7 +12,7 @@ int main()
 	fgets(buf,32,stdin);
 	bytesread=write(fd,buf,(sizeof(buf)-1))>0;
 	close(fd);
-}
+}```
 * * * *  * * * *  * * * * * * * * * * * * * * * * * * ** * * * * **  * * * * *
 2) Develop a C program to open an existing text file and display its contents?
 #include<stdio.h>

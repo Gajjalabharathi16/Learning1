@@ -1,3 +1,4 @@
+```c
 Embedded System:
 An embedded system is defined as a combination of hardware and software designed to perform a specific task
 •	They are typically equipped with a processing unit.
@@ -128,7 +129,9 @@ A Linux operating system's software stack can be virtually represented in layers
 
 
   1.Applications (Top Layer):
+  ______________________
 Application layer:
+
 Executable Binaries:
 Binaries are executables created for specific purposes.
 Examples:
@@ -140,15 +143,20 @@ Common directories:
 •	/sbin
 •	/bin
 •	/usr/bin
-BusyBox
+BusyBox:
+__________
 BusyBox is a single executable that combines many common Linux/Unix command-line tools into one lightweight program
 Eg:ls,cp,cat,mv,vi etc..
-Services
+2.Services:
+___________
 Services are processes launched by the kernel or init, responsible for specific system tasks.
-Init Service
+Init Service:
+____________
 •	The first user-space service launched by the kernel.
 •	Responsible for starting all other services.
+
 Init System Variants:
+
 •	systemd or upstart: Used in complex/desktop Linux systems
 •	System V init: Common in embedded Linux
 Examples of Services:
@@ -158,7 +166,8 @@ Examples of Services:
 •	Compositor: Connects graphical apps to lower layers
 •	SSHD: Secure Shell Daemon
 •	BootlogD: Logs boot messages
-Libraries:
+3.Libraries:
+___________________
 Libraries are shared components used by applications and services.
 Core: C Library
 •	Acts as the foundation for other libraries.
@@ -179,7 +188,8 @@ Other Important Libraries:
 •	M library (Math)
 •	XCB: X11 support
 •	EGL: Embedded graphics
-System Call Interface
+4.System Call Interface:
+_________________________
 Acts as the bridge between user space (apps, services, libraries) and kernel space (drivers, kernel).
 •	Implemented through functions in the C library.
 •	Used to access kernel services and hardware.
@@ -194,7 +204,8 @@ Communication Mechanism
 When a user-space process performs a system call on a driver file:
 •	The kernel driver is notified.
 •	Relevant callbacks or hooks in the driver are executed.
- Drivers
+5. Drivers:
+_______________
 Kernel-level software enabling the OS to interact with hardware.
 •	Represented as special files in /dev.
 •	Handle requests via system call hooks.
@@ -206,7 +217,8 @@ Examples:
 •	Touchscreen drivers
 •	Button drivers
 •	FM tuner drivers
-Linux Kernel (Bottom Layer)
+6.Linux Kernel (Bottom Layer):
+______________________________
 The core of the Linux OS, managing hardware and system operations.
 Core Components:
 •	MMU (Memory Management Unit): Handles virtual memory
@@ -219,10 +231,13 @@ Used by kernel subsystems and drivers for:
 •	Memory allocation
 •	Resource management
 •	Device interaction
-Additional Crucial Components:
-Bootloader
+7.Additional Crucial Components:
+________________________________
+Bootloader:
+_____________
 The bootloader is the primary software responsible for initializing hardware and loading the Linux kernel into memory during the boot process.
-Toolchain
+Toolchain:
+________________
 A toolchain is a set of tools used to build software, particularly for cross-compilation in embedded systems.
 Cross-Compilation
 •	Definition: Building software on one platform (e.g., a PC with x86 architecture) that runs on another platform (e.g., Raspberry Pi with ARM).

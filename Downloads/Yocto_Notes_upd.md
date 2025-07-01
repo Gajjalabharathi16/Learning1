@@ -1,4 +1,4 @@
-```c
+
 Embedded System:
 An embedded system is defined as a combination of hardware and software designed to perform a specific task
 •	They are typically equipped with a processing unit.

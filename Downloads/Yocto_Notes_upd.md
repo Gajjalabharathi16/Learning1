@@ -15,11 +15,12 @@ An embedded system is defined as a combination of hardware and software designed
 •	In the above example we can call individual components as a embedded systems because each components has its own purpose and memory and processor.
 Development Options for a Security System (Illustrative Example):
 
+
+
+![image](https://github.com/user-attachments/assets/eb19494d-9a42-4385-9155-abb4ebc6bc15)
+
+
  
-
-
-
-
 
 
 

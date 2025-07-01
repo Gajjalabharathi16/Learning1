@@ -5,7 +5,9 @@ An embedded system is defined as a combination of hardware and software designed
 •	They are part of bigger systems.
 •	They are customized for a specific purpose.
 •	less cost as compared to generic purpose system
-![image](https://github.com/user-attachments/assets/47782612-cd0e-4e1f-87dc-f29dba8cc541)
+
+  ![image](https://github.com/user-attachments/assets/58990272-8837-4258-9e1c-adbf1e820b16)
+
 
 
   

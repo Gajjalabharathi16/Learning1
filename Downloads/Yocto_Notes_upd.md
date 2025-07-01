@@ -63,17 +63,26 @@ Embedded systems from hardware perspective:
        
 
 
+![image](https://github.com/user-attachments/assets/e9637d01-a384-4d47-b3a3-e0c2e353b1b9)
 
 
 
 
      
 
-Embedded systems from sotware perspective:
+Embedded systems from software perspective:
+
+![image](https://github.com/user-attachments/assets/8e5158df-b816-45ad-9cfa-21bf66b05ebf)
+
+
+
  
 
 
 Generation of system Image and flashing it into board:
+_________________________________________________________
+![image](https://github.com/user-attachments/assets/c17b6f40-c36d-4471-88db-8b2566f2136f)
+
  
 First we need source code for all the components that makeup our OS. We can get it from either SOC vendor or can download from web
 compile source code using Toolchain(compiler) to generate binaries,libraries and object files. ARM processor uses gcc compiler
@@ -86,11 +95,8 @@ Here system Images contains complete OS:
 •	Root Filesystem (rootfs.ext4, .cpio, .squashfs, etc.)
 
 
-
-
-
 Introduction to Embedded Linux Systems:
- 
+![image](https://github.com/user-attachments/assets/17ad1354-de11-4a36-9a04-71d388b2d49c)
 
 Hardware vs Software Perspective:
 Hardware Perspective:
@@ -103,34 +109,25 @@ Software Perspective:
 •	Add only what’s needed (e.g., custom drivers, apps).
 •	Goal: Fast boot, low power, smaller image size.
 
-
-
-
-
-
-
-Feature	Linux (General)	Embedded Linux
-Usage	PCs, servers	Embedded devices (IoT, TV)
-Size	Large (GBs)	Small (MBs or less)
-User Interface	GUI supported	Mostly no GUI
-Customization	General purpose	Highly customized
-Performance needs	High	Optimized for low power
 Why Use Linux in Embedded Products?
 Linux is used where operating system functionality is heavily needed and where the open-source ecosystem can be leveraged.
 •	Complexity: Modern embedded products (like televisions) are too complex for bare-metal development due to extensive functionality.
 •	Open-Source Benefits: Linux and its open-source community already offer solutions for these complex features
 •	Hardware Dependency: The hardware platform must also support these features.
+
+
 Linux Desktop Software Stack Components:
 --------------------------------------------
 A Linux operating system's software stack can be virtually represented in layers:
+![image](https://github.com/user-attachments/assets/ec99be90-8f21-49cc-9362-cdc3bf9a40e9)
+
+![image](https://github.com/user-attachments/assets/fa9e513f-5216-4a02-85c3-9a0cfeb14db9)
+
+![image](https://github.com/user-attachments/assets/ceb39c63-5503-47a9-b234-b93c67b867e7)
 
 
- 
 
-
- 
-
- 1.Applications (Top Layer):
+  1.Applications (Top Layer):
 Application layer:
 Executable Binaries:
 Binaries are executables created for specific purposes.

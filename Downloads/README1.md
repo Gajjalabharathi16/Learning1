@@ -30,8 +30,11 @@
 - Now take dropbear package which is locaed in layer `meta/recipe-core/dropbear`
 - perform `bitbake dropbear`
 - All the tasks that are parsed from this dropbear_2022.83.bb recipe recipe will be built
+- 
   1)First this tasks will fetch and download the source code
+  
   2)Do the configuration and compilation
+  
   3)Install rootfs and perform some quality issues checks
 
 

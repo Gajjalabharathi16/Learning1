@@ -129,3 +129,13 @@ while true; do
     sleep 5
 done
 ```
+
+
+- Blue led will blink while the data was erasing
+- Green led will blink for 3 sec after successfully the data was deleted
+- Red led will blinnk if the data is failed to erase
+
+ led pins configured in raspberry:
+ - Blue -- GPIO 17
+ - Green -- GPIO 27
+ - RED -- GPIO 22

@@ -58,3 +58,8 @@ while true; do
 done
 ```
 
+systemd service:
+
+![WhatsApp Image 2025-07-07 at 13 54 43_959f4f3e](https://github.com/user-attachments/assets/04b651d8-a1ce-4e79-9754-a0d29739a0f6)
+
+

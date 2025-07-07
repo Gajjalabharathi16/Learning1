@@ -78,7 +78,14 @@
 | QA             | `do_package_qa`  | Run quality assurance checks |
 ```
 
-
+1)What is the purpose of oe-init-build-env?  
+A)It sets up the build environment and switches the terminal into the build/ directory where the configuration files   (local.conf, bblayers.conf) reside.  
+2)What are the two important configuration files in the build directory?  
+A)local.conf and bblayers.conf  
+3)What is the role of bblayers.conf?  
+A)It tells BitBake which layers to include during the build by listing paths to each Yocto layer.  
+4)What does local.conf configure?  
+A)It defines build-specific settings such as the target machine, image type, parallelism, and distribution features.  
 
 
 

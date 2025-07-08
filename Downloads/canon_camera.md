@@ -116,3 +116,7 @@ while true; do
     sleep 5
 done
 ```
+system service:
+
+![WhatsApp Image 2025-07-08 at 12 05 10_f85988a2](https://github.com/user-attachments/assets/770b482d-6eb0-430d-b691-3dcded87b9fc)
+

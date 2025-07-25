@@ -95,7 +95,7 @@ int main()
 }
 ```
 
-```
+```c
 //Q)write a c program to print all subsets of an array eg:{1,2,3,4,5}
 12 13 14 15 23 24 25
 123 124 125 134 135...etc

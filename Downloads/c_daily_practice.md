@@ -96,7 +96,38 @@ int main()
 ```
 
 ```
-Q)write a c program to print all subsets of an array eg:{1,2,3,4,5}
+//Q)write a c program to print all subsets of an array eg:{1,2,3,4,5}
 12 13 14 15 23 24 25
-123 124 125 134 135
+123 124 125 134 135...etc
+
+#include <stdio.h>
+
+int main() {
+    int arr[100], n;
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        for (int j = i+1; j < n; j++) {
+            printf("%d%d ", arr[i], arr[j]);
+        }
+    }
+    printf("\n");
+
+    for (int i = 0; i < n; i++) {
+        for (int j = i+1; j < n; j++) {
+            for (int k = j+1; k < n; k++) {
+                printf("%d%d%d ", arr[i], arr[j], arr[k]);
+            }
+        }
+    }
+    printf("\n");
+    return 0;
+}
+```
 

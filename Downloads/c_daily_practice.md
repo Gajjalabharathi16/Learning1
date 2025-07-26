@@ -130,4 +130,35 @@ int main() {
     return 0;
 }
 ```
+```c
+//Q)write a c program to replace 0's with 1's in a given number
+#include<stdio.h>
+#include<stdlib.h>
 
+int main()
+{
+    int num,digit,res = 0,place = 1;
+    printf("enter the number:\n");
+    scanf("%d",&num);
+    
+    if(num == 0)
+    {
+        num = 1;
+    }
+    else
+    {
+        digit=num;
+        while(digit> 0)
+        {
+            res = digit %10;
+            if(res == 0)
+            {
+                num += place;
+            }
+            place *= 10;
+            digit = digit/10;
+        }
+    }
+    printf("result:%d\n",num);   
+}
+```

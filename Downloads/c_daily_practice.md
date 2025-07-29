@@ -261,3 +261,66 @@ int main()
     printf("%d",res);
 }
 ```
+
+```c
+//Print characters with their frequencies
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+    char str[100];
+    int count=0;
+    fgets(str,100,stdin);
+    str[strcspn(str, "\n")] = '\0';
+    int visited[100]={0};
+    
+    for(int i=0;str[i]!='\0';i++)
+    {
+        count=0;
+        if(visited[i]==1)
+        {
+            continue;
+        }
+        for(int j=0;str[j]!='\0';j++)
+        {
+            if(str[i]==str[j])
+            {
+                count++;
+                visited[j]=1;
+            }
+        }
+        printf("count of %c is %d\n",str[i],count);
+    }
+}
+```
+```c
+// to print leading (or leader) elements from right to left in an array 
+#include<stdio.h>
+#include<limits.h>
+int main()
+{
+    //int arr[]={2,9,4,1,8};
+    int arr[100];
+    int n;
+    int num=INT_MIN;
+    int prev=INT_MIN;
+    printf("enter no of elements\n");
+    scanf("%d",&n);
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    printf("the leader elements are:");
+    for(int i=n-1;i>=0;i--)
+    {
+        if(arr[i]>=num)
+        {
+            prev=num;
+            num=arr[i];
+            printf("%d ",num);
+        }
+    }
+    
+}
+```

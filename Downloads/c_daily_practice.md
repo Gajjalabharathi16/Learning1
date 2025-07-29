@@ -189,3 +189,27 @@ int main()
     }
 }
 ```
+```c
+// Capitalize the first letter of each word
+#include<stdio.h>
+int main()
+{
+    char str[100];
+    fgets(str,100,stdin);
+    for(int i=0;str[i]!='\0';i++)
+    {
+        if(i==0)
+        {
+            str[i]=str[i]-32;
+        }
+        if(str[i]==' ' || str[i]=='.' || str[i]==',')
+        {
+            if(str[i+1]>'a' && str[i+1]<'z')
+            {
+                str[i+1]=str[i+1]-32;
+            }
+        }
+    }
+    printf("%s",str);
+}
+```

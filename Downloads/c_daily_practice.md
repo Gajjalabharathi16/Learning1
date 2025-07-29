@@ -213,3 +213,51 @@ int main()
     printf("%s",str);
 }
 ```
+```c
+//Multiply a number by 2 without * using switch case
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    while(1)
+    {
+    int choice;
+    printf("enter choice: \n 0 to exit\n 1 to multiply\n 2 to divide\n ");
+    scanf("%d",&choice);
+    switch(choice)
+    {
+        case 0:
+            printf("exited\n");
+            exit(0);
+        case 1:
+            int num;
+            printf("enter number\n");
+            scanf("%d",&num);
+            int res=num<<1;
+            printf("%d\n",res);
+            break;
+        case 2:
+            int num1;
+            printf("enter number\n");
+            scanf("%d",&num1);
+            int res1=num1>>1;
+            printf("%d\n",res1);
+            break;
+        default:
+            printf("choose valid option 0 to exit,1 to multiply,2 to divide\n");
+        
+    }    
+    }
+}
+
+                                                  or
+
+#include<stdio.h>
+int main()
+{
+    int num;
+    scanf("%d",&num);
+    int res=num<<1;
+    printf("%d",res);
+}
+```

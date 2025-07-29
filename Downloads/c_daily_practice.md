@@ -324,3 +324,29 @@ int main()
     
 }
 ```
+```c
+// Check parity of a number (even/odd bits)
+#include<stdio.h>
+int main()
+{
+    int num;
+    int even_count=0;
+    int odd_count=0;
+    scanf("%d",&num);
+    int even=num&0x55555555;
+    int odd=num&0xAAAAAAAA;
+    while(even>0)
+    {
+        even_count+=even&1;
+        even>>=1;
+    }
+    while(odd>0)
+    {
+        odd_count+=odd&1;
+        odd>>=1;
+    }
+   printf("Even bit count: %d\n", even_count);
+   printf("Odd bit count : %d\n", odd_count);
+
+}
+```

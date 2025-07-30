@@ -388,3 +388,26 @@ int main(void)
   return 0;
 }
 ```
+```c
+//Program to convert decimal to binary without bitwise
+#include<stdio.h>
+int main()
+{
+    int num;
+    int r;
+    int bin[32];
+    scanf("%d",&num);
+    int i=0;
+    while(num>0)
+    {
+        r=num%2;
+        bin[i++]=r;
+        num=num/2;
+    }
+    for(int j=i-1;j>=0;j--)
+    {
+        printf("%d",bin[j]);
+        
+    }
+}
+```

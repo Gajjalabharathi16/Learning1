@@ -452,3 +452,31 @@ int main()
       printf("%c count is %d\n",maxchar,max);
 }
 ```
+```c
+//Move all zeros to the end
+#include<stdio.h>
+int main()
+{
+    int arr[]={1,0,2,4,0,3};
+    int count=0;
+    int n=sizeof(arr)/sizeof(arr[0]);
+    for(int i=0;i<n-count;i++)
+    {
+        if(arr[i]==0)
+        {
+            for(int j=i;j<n-1;j++)
+            {
+            arr[j]=arr[j+1];
+            }
+            arr[n - 1] = 0;  
+            count++;         
+            i--;
+        }
+        
+    }
+    for(int i=0;i<n;i++)
+    {
+        printf("%d",arr[i]);
+    }
+}
+```

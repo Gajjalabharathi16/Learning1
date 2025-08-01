@@ -480,3 +480,23 @@ int main()
     }
 }
 ```
+```c
+//Find position of rightmost set bit
+#include<stdio.h>
+int main()
+{
+    int num;
+    scanf("%d",&num);
+    int pos=0;
+    while(num>0)
+    {
+        if(num&1)
+        {
+            printf("the position of rightmost set bit is %d",pos);
+            break;
+        }
+        pos++;
+        num=num>>1;
+    }
+}
+```

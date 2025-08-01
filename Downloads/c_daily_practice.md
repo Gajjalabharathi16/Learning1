@@ -411,3 +411,44 @@ int main()
     }
 }
 ```
+```c
+//highest frequency character in a sentence
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[100];
+    fgets(str,100,stdin);
+    char maxchar;
+    str[strcspn(str,"\n")]='\0';
+    //scanf("%s",str);
+    int visited[100]={0};
+    int max=0;
+    for(int i=0;str[i]!='\0';i++)
+    {
+        if(str[i]==' ')
+        {
+            continue;
+        }
+        if(visited[i]==1)
+        {
+            continue;
+        }
+        int count=0;
+        for(int j=0;str[j]!='\0';j++)
+        {
+            if(str[i]==str[j])
+            {
+                count++;
+                visited[j]=1;
+            }
+        }
+        if(count>max)
+        {
+            max=count;
+            maxchar=str[i];
+        }
+    }
+      printf("%c count is %d\n",maxchar,max);
+}
+```

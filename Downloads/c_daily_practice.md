@@ -500,3 +500,81 @@ int main()
     }
 }
 ```
+
+```c
+// Toggle all characters of a string
+#include<stdio.h>
+int main()
+{
+    char str[100];
+    fgets(str,100,stdin);
+    for(int i=0;str[i]!='\0';i++)
+    {
+        if(str[i]==' ')
+        {
+            continue;
+        }
+        if(str[i]>='A' && str[i]<='Z')
+        {
+            str[i]=str[i]+32;
+        }
+        else
+        {
+            str[i]=str[i]-32;
+        }
+    }
+    printf("%s",str);
+}
+```
+```c
+//Remove characters except alphabets
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[100];
+    fgets(str,100,stdin);
+    for(int i=0;str[i]!='\0';i++)
+    {
+        if(str[i]!=' ' && (str[i]>='a' && str[i]<='z' || str[i]>='A' && str[i]<='Z'))
+        {
+            printf("%c",str[i]);
+        }
+    }
+}
+```
+```c
+//write a c program to find pairs with given sum
+
+// Find pair with given sum
+#include<stdio.h>
+int main()
+{
+    int arr[100];
+    int n;
+    int sum;
+   
+    printf("enter the elements count\n");
+    scanf("%d",&n);
+    printf("enter sum\n");
+    scanf("%d",&sum);
+    printf("enter array elements\n");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    printf("the pairs found are:\n");
+    for(int i=0;i<n;i++)
+    {
+        for(int j=i+1;j<n;j++)
+        {
+            if((arr[i]+arr[j])==sum)
+            {
+                printf("%d %d\n",arr[i],arr[j]);
+            }
+        }
+    }
+}
+```
+<img width="334" height="274" alt="Screenshot 2025-08-02 123610" src="https://github.com/user-attachments/assets/cbaea2af-67e4-45e2-a51c-b0802a3b3dea" />
+

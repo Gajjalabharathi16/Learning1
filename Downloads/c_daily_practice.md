@@ -578,3 +578,41 @@ int main()
 ```
 <img width="334" height="274" alt="Screenshot 2025-08-02 123610" src="https://github.com/user-attachments/assets/cbaea2af-67e4-45e2-a51c-b0802a3b3dea" />
 
+```c
+//Clear all bits from MSB to a given bit position
+#include <stdio.h>
+
+// Function to print binary (8 bits)
+void printBinary(int num) {
+    for (int i = 7; i >= 0; i--) {
+        printf("%d", (num >> i) & 1);
+    }
+    printf("\n");
+}
+
+int main()
+{
+    int num;
+    printf("Enter number: ");
+    scanf("%d", &num);
+
+    int pos = 2;
+
+    printf("Original binary: ");
+    printBinary(num);
+
+    // Create mask with lower bits set (pos bits and below)
+    int mask = (1 << pos) - 1;
+
+    num = num & mask;
+
+    printf("Modified binary: ");
+    printBinary(num);
+
+    printf("Modified decimal: %d\n", num);
+
+    return 0;
+}
+
+```
+

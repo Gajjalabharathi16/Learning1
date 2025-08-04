@@ -615,4 +615,52 @@ int main()
 }
 
 ```
+```c
+#include<stdio.h>
+int main()
+{
+    int arr[]={1,2,3,4,5,6,7,8};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i]%2!=0)
+        {
+            int temp=arr[n-1-i];
+            arr[n-1-i]=arr[i];
+            arr[i]=temp;
+        }
+    }
+    for(int i=0;i<n;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+    
+    
+}
+```
+```c
+//Q))write a c program to sort all odd numbers to left side of an array and even numbers to right side of an array
+//Note:Don't use extra array and temp variable 
+#include<stdio.h>
+int main()
+{
+    int arr[]={1,2,3,4,5,6,7,8};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i]%2!=0)
+        {
+           arr[i] = arr[i] + arr[n-1-i];
+           arr[n-1-i] = arr[i] - arr[n-1-i];
+           arr[i] = arr[i] - arr[n-1-i];
 
+        }
+    }
+    for(int i=0;i<n;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+    
+    
+}
+```

@@ -54,3 +54,69 @@ int main()
 }
 
 ```
+``c
+transpose of matrix
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+        int arr[5][5]={{1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15},{16,17,18,19,20},{21,22,23,24,25}};
+
+
+    //int arr[5][5];
+        /*printf("enter matrix elements:\n");
+        for(int i = 0;i<5;i++)
+        {
+                for(int j = 0;j<5;j++)
+                {
+                        scanf("%d",&arr[i][j]);
+                }
+        }*/
+        int count = 0;
+        for(int i = 0;i<5;i++)
+        {
+                for(int j = 0;j<5;j++)
+                {
+                        printf("%d ",arr[j][i]);
+                        count++;
+                        if(count == 5)
+                        {
+                                printf("\n");
+                        }
+                }
+                count = 0;
+        }
+}
+```
+                                            or
+```c
+#include<stdio.h>
+int main()
+{
+        int arr[5][5]={
+                {1,2,3,4,5},
+                {6,7,8,9,10},
+                {11,12,13,14,15},
+                {16,17,18,19,20},
+                {21,22,23,24,25},
+        };
+        for(int i=0;i<5;i++)
+        {
+                for(int j=0;j<i;j++)
+                {
+                        int temp=arr[i][j];
+                        arr[i][j]=arr[j][i];
+                        arr[j][i]=temp;
+                }
+        }
+        for(int i=0;i<5;i++)
+        {
+                for(int j=0;j<5;j++)
+                {
+                        printf("%d\t",arr[i][j]);
+                }
+                printf("\n");
+        }
+}
+```

@@ -1,11 +1,10 @@
 ```c
-```
-To interleave words from two files into 3rd file
+```To interleave words from two files into 3rd file
 
 file1:this is viven training
 file2:is embedded institute
-file3:this is viven embedded training institiute
-```
+file3:this is viven embedded training institiute```
+
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>

@@ -694,6 +694,7 @@ int main() {
     printf("Anagram\n");
     return 0;
 }
+```
 ```c
  //4.write a c program to find the number/word is a palindrome and explain the logic
 //using strings

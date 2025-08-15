@@ -749,3 +749,84 @@ int main()
     }
 }
 ```
+```c
+//linear search
+#include<stdio.h>
+int main()
+{
+    int arr[]={1,4,2,5,6,7,8};
+    int len=sizeof(arr)/sizeof(arr[0]);
+    int target=5;
+    int found=-1;
+    for(int i=0;i<len;i++)
+    {
+        if(arr[i]==target)
+        {
+            found=i;
+            break;
+        }
+    }
+    printf("%d found at index %d",target,found);
+}
+
+//binary seaech
+#include <stdio.h>
+
+int main() {
+    int arr[] = {1, 2, 4, 5, 7, 9};
+    int len = sizeof(arr) / sizeof(arr[0]);
+    int target = 7;
+
+    int low = 0, high = len - 1;
+    int found = -1;
+
+    while (low <= high) {
+        int mid = (low + high) / 2;
+
+        if (arr[mid] == target) {
+            found = mid;
+            break;
+        } else if (arr[mid] < target) {
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
+
+    if (found != -1)
+        printf("Element found at index %d\n", found);
+    else
+        printf("Element not found\n");
+
+    return 0;
+}
+
+```
+
+```c
+// programming question is how to find highest 2 power value less than 132 by using bit manipulation. 
+#include<stdio.h>
+int main()
+{
+    int num=132;
+   int power=1;
+    while((power<<1)<=num)
+    {
+     power=power<<1;   
+    }
+    if(power==num)
+    {
+        power>>=1;
+    }
+    printf("%d",power);
+}
+```
+```
+Definition:
+Data types tell the compiler what kind of data a variable can store and how much memory it needs.
+2. Keywords
+
+Definition:
+Keywords are reserved words in C with special meaning for the compiler.
+You cannot use them as variable names or identifiers.
+```

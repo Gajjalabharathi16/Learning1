@@ -830,3 +830,20 @@ Definition:
 Keywords are reserved words in C with special meaning for the compiler.
 You cannot use them as variable names or identifiers.
 ```
+```c
+ //printf stars in pattern like 5,3,1
+#include<stdio.h>
+int main()
+{
+    int num=5;
+    for(int i=5;i>=1;i-=2)
+    {
+        
+            for(int j=i;j>=1;j--)
+            {
+            printf("*");
+            }
+        printf("\n");
+    }
+}
+```

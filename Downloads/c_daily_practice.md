@@ -847,3 +847,33 @@ int main()
     }
 }
 ```
+```c
+//Implement XOR using only ~ and &
+#include<stdio.h>
+int main()
+{
+    int a=7;
+    int b=1;
+    int c=0;
+    for(int i=32;i>=0;i--)
+    {
+        if(((a>>i)&1)!=((b>>i)&1))
+        {
+            c=(c<<1)|1;
+        }
+        else
+        {
+            c=c<<1;
+        }
+    }
+    for(int i=3;i>=0;i--)
+    {
+        printf("%d",(c>>i)&1);
+    }
+    printf("\n");
+    printf("%d\n",c);
+}
+                                  or
+
+
+```

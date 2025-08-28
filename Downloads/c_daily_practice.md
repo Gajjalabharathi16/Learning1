@@ -910,3 +910,89 @@ int main()
     printf("%s",str);
 }
 ```
+```c
+Deleting nth node from last
+#include <stdio.h>
+#include <stdlib.h>
+
+struct list {
+    int data;
+    struct list *next;
+};
+
+void delete_kth_from_last(struct list **head, int k) {
+    struct list *first = *head;
+    struct list *second = *head;
+    struct list *prev = NULL;
+
+    // Move 'first' k steps ahead
+    for (int i = 0; i < k; i++) {
+        if (first == NULL) {
+            printf("List has fewer than k nodes\n");
+            return;
+        }
+        first = first->next;
+    }
+
+    // If first is NULL, it means delete the head node
+    if (first == NULL) {
+        struct list *temp = *head;
+        *head = (*head)->next;
+        free(temp);
+        return;
+    }
+
+    // Move first to the end, second will stop at node to delete
+    while (first->next != NULL) {
+        first = first->next;
+        prev = second;
+        second = second->next;
+    }
+
+    // 'second' is the node to delete
+    if (prev != NULL) {
+        prev->next = second->next;
+        free(second);
+    }
+}
+
+void print_list(struct list *head) {
+    while (head != NULL) {
+        printf("%d -> ", head->data);
+        head = head->next;
+    }
+    printf("NULL\n");
+}
+
+struct list* create_node(int data) {
+    struct list* new_node = (struct list*)malloc(sizeof(struct list));
+    new_node->data = data;
+    new_node->next = NULL;
+    return new_node;
+}
+
+int main() {
+    struct list *head = NULL, *temp = NULL;
+
+    // Create list with 1->2->3->4->5->NULL
+    for (int i = 1; i <= 5; i++) {
+        struct list *node = create_node(i);
+        if (head == NULL)
+            head = node;
+        else
+            temp->next = node;
+        temp = node;
+    }
+
+    printf("Original list:\n");
+    print_list(head);
+
+    int k = 3;
+    delete_kth_from_last(&head, k);
+
+    printf("After deleting last but %d-th node:\n", k);
+    print_list(head);
+
+    return 0;
+}
+```

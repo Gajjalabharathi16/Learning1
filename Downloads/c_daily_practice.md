@@ -873,7 +873,40 @@ int main()
     printf("\n");
     printf("%d\n",c);
 }
-                                  or
 
+```
+```c
+Q)words in a string reversing.
+#include<stdio.h>
+#include<string.h>
 
+int main()
+{
+    char str[]="I Love India";
+    int len=strlen(str);
+    for(int i=0;i<len/2;i++)
+    {
+        char temp=str[i];
+        str[i]=str[len-i-1];
+        str[len-i-1]=temp;
+    }
+    int start =0;
+    for(int i=0;i<=len;i++)
+    {
+        if(str[i]==' ' || str[i]=='\0')
+        {
+            int left=start,right = i-1;
+            while(left<right)
+            {
+                char temp=str[left];
+                str[left]=str[right];
+                str[right]=temp;
+                left++;
+                right--;
+            }
+            start=i+1;
+        }
+    }
+    printf("%s",str);
+}
 ```

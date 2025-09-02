@@ -1,4 +1,6 @@
 ```c
+
+//write a code to restart the child process that was aborted.
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

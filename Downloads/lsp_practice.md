@@ -38,7 +38,6 @@ int main() {
 
 ```
 ```c
-//using recursion
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
